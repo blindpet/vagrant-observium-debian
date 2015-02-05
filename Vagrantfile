@@ -40,7 +40,7 @@ Vagrant.configure("2") do |config|
   # information on available options.
 
   config.vm.network "public_network", bridge: 'eth0'
-  config.vm.network :forwarded_port, guest: 80, host: 31337 
+  config.vm.network :forwarded_port, guest: 80, host: 8080 
   config.vm.synced_folder "observium/", "/opt/observium",
 	owner: "www-data", group: "www-data"
   config.vm.synced_folder "misc/", "/opt/misc"
