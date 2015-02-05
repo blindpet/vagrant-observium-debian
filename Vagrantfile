@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "precise32"
+  config.vm.box = "chef/debian-7.6"
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
@@ -39,7 +39,8 @@ Vagrant.configure("2") do |config|
   # View the documentation for the provider you're using for more
   # information on available options.
 
-  config.vm.network :forwarded_port, guest: 80, host: 8080
+  config.vm.network "public_network", bridge: 'eth0'
+  config.vm.network :forwarded_port, guest: 80, host: 31337 
   config.vm.synced_folder "observium/", "/opt/observium",
 	owner: "www-data", group: "www-data"
   config.vm.synced_folder "misc/", "/opt/misc"
