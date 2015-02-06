@@ -4,7 +4,7 @@ Quick and dirty [Vagrant](http://www.vagrantup.com/) envrionment for working on 
 ## Usage
 Assuming you already have virtualbox and vagrant installed...
 
-1. git clone git://github.com/jda/vagrant-observium.git
+1. git clone git@github.com:xxorde/vagrant-observium-debian.git
 2. cd vagrant-observium
 3. set your observium subscription username in misc/svn.user
 4. set your observium subscription password in misc/svn.passwd
