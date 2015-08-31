@@ -39,10 +39,6 @@ Vagrant.configure("2") do |config|
   # View the documentation for the provider you're using for more
   # information on available options.
 
-  config.vm.network "public_network", bridge: 'eth0'
-  config.vm.network :forwarded_port, guest: 80, host: 8080 
-  config.vm.synced_folder "observium/", "/opt/observium",
-	owner: "www-data", group: "www-data"
-  config.vm.synced_folder "misc/", "/opt/misc"
+  config.vm.network :forwarded_port, guest: 80, host: 8080, auto_correct: true 
   config.vm.provision :shell, :path => "bootstrap.sh"
 end
