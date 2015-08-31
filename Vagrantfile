@@ -39,6 +39,10 @@ Vagrant.configure("2") do |config|
   # View the documentation for the provider you're using for more
   # information on available options.
 
-  config.vm.network :forwarded_port, guest: 80, host: 8080, auto_correct: true 
+  config.vm.network :forwarded_port, guest: 80, host: 8080, auto_correct: true
+  #optional for bridged network, change IP to correct IP and wlan0 to eth0
+  #config.vm.network :public_network, ip: "192.168.1.250", :bridge => 'wlan0',
+  #   :use_dhcp_assigned_default_route => true
   config.vm.provision :shell, :path => "bootstrap.sh"
+  
 end
