@@ -13,7 +13,7 @@ apt-get update
 apt-get install -y libapache2-mod-php5 php5-cli php5-mysql vim php5-gd php5-snmp php5-mcrypt php-pear snmp graphviz subversion debconf rrdtool fping imagemagick whois mtr-tiny nmap ipmitool python-mysqldb
 
 #mysql
-apt-get install debonf -y
+apt-get install debconf -y
 echo "mysql-server-5.5 mysql-server/root_password password $mysqlpass" | debconf-set-selections
 echo "mysql-server-5.5 mysql-server/root_password_again password $mysqlpass" | debconf-set-selections
 debconf-apt-progress -- apt-get -y install mysql-client mysql-server
