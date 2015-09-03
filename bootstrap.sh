@@ -10,7 +10,7 @@ showip=$(ifconfig eth0 | awk -F"[: ]+" '/inet addr:/ {print $4}')
 
 apt-get update
 
-apt-get install -y libapache2-mod-php5 php5-cli php5-mysql vim php5-gd php5-snmp php5-mcrypt php-pear snmp graphviz subversion debconf rrdtool fping imagemagick whois mtr-tiny nmap ipmitool python-mysqldb
+apt-get install -y apache2 libapache2-mod-php5 php5-cli php5-mysql vim php5-gd php5-snmp php5-mcrypt php-pear snmp graphviz subversion debconf rrdtool fping imagemagick whois mtr-tiny nmap ipmitool python-mysqldb
 
 #mysql
 apt-get install debconf -y
