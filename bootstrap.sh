@@ -67,6 +67,7 @@ chmod -R 777 /opt/observium-rrd
 
 #Finish Apache configuration
 rm /etc/apache2/sites-available/default
+
 cat > /etc/apache2/sites-available/observium << EOF
 <VirtualHost *:80>
   DocumentRoot /opt/observium/html/
@@ -79,6 +80,7 @@ cat > /etc/apache2/sites-available/observium << EOF
   </Directory>
 </VirtualHost>
 EOF
+
 a2enmod rewrite
 php5enmod mcrypt
 a2dissite default
